@@ -19,4 +19,4 @@ docker build -t saeedrm6/ubuntu-nginx-vod-module .
 Docker Hub
 ----------
 
-The image is available on Docker Hub: 
+The image is available on Docker Hub: SOON
