@@ -26,6 +26,11 @@ You can run this example locally with Docker
 % docker run --name ubuntu_nginx_kaltura -v $PWD/nginx/videos:/var/www/html/public/videos -d -p 3030:80 saeedrm6/ubuntu-nginx-vod-module
 ```
 
+Or you can run it with docker-compose
+```
+% docker-compose -f docker-compose.yml up -d --remove-orphan --force-recreate
+```
+
 After running this command, you should be able to play the following URLs:
 
 - HLS - SINGLE VIDEO FILE: http://localhost:3030/hls/video_360p.mp4/master.m3u8
