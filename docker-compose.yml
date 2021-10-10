@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: saeedrm6/ubuntu-nginx-vod-module
+    container_name: ubuntu-nginx-vod-module
+    restart: unless-stopped
+    working_dir: /var/www/html
+    volumes:
+      - ./nginx/videos/:/var/www/html/public/videos
+    networks:
+      - vod-module
+    ports:
+      - 3030:80
+networks:
+  vod-module:
+    name: "vod-module"
+    driver: bridge
+    attachable: true
+
